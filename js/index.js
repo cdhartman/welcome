@@ -58,7 +58,7 @@ function buildCFIWhiteboardURL (url) {
 		serial = device.serial;
 		uuid = device.uuid;
 	}
-	urlString = 'https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard;
+	urlString = 'https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard';
 	// urlString += '/?serial=' + serial + '&uuid=' + uuid;
 	return urlString;
 }
