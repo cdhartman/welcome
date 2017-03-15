@@ -59,13 +59,13 @@ function buildCFIWhiteboardURL (url) {
 		serial = device.serial;
 		uuid = device.uuid;
 	}
-	urlString = 'https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard';
-	urlString += '/?serial=' + serial;
+	urlString = url;
+	urlString += '?serial=' + serial;
 	return urlString;
 }
 
 function launchCFIWhiteboard(url) {
 	var urlString = '';
-	urlString = buildCFIWhiteboardURL ('https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard/');
+	urlString = buildCFIWhiteboardURL ('https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard');
     window.open(urlString, '_blank', 'location=no,toolbar=no');
 }
