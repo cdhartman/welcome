@@ -36,7 +36,7 @@ var app = {
         app.receivedEvent('deviceready');
 		var serial = device.serial, uuid = device.uuid, urlString = '';
 		document.getElementById("deviceInfo").innerHTML = "serial: " + serial + "<br>uuid: " + uuid;
-		urlString = buildCFIWhiteboardURL ('https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard/');
+		urlString = buildCFIWhiteboardURL ('https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard');
 		document.getElementById("urlInfo").innerHTML = urlString;
 		// window.open(urlString, '_blank', 'location=no,toolbar=no');
     },
