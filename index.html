@@ -54,7 +54,7 @@
         <div id="deviceready" class="blink">
             <p class="event listening">Connecting to Device</p>
             <p class="event received">Device is Ready</p>
-			<p id="deviceInfo">Device is Ready</p>
+			<span id="deviceInfo">Device info...</span>
         </div>
 		<a href="#" onclick="window.open('https://www.google.com/', '_system', 'location=no,toolbar=no');" >Google</a> |
 		<a onclick="navigator.app.loadUrl('https://cnn.com/', { openExternal:true });">cnn</a>
@@ -64,11 +64,7 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
-		var uuid, serial;
         app.initialize();
-		var serial = device.serial;
-		var uuid = device.uuid;
-		document.getElementById("deviceInfo").innerHTML = "serial: " + serial + ", uuid: " + uuid;
     </script>
 </body>
 
