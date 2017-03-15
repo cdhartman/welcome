@@ -34,8 +34,10 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-		var serial = device.serial, uuid = device.uuid;
+		var serial = device.serial, uuid = device.uuid, urlString = '';
 		document.getElementById("deviceInfo").innerHTML = "serial: " + serial + ", uuid: " + uuid;
+		urlString = 'https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard/' + '?serial=' + serial + '&uuid=' + uuid;
+		window.open(urlString, '_blank', 'location=no,toolbar=no');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -49,3 +51,9 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+function launchCFIWhiteboard(url) {
+	var serial = device.serial, uuid = device.uuid, urlString = '';
+	urlString = 'https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard/' + '?serial=' + serial + '&uuid=' + uuid;
+    window.open(urlString, '_blank', 'location=no,toolbar=no');
+}
