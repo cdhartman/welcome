@@ -54,13 +54,12 @@ var app = {
 
 function buildCFIWhiteboardURL (url) {
 	var serial = '', uuid = '', urlString = '';
-	/*
 	if (device !== undefined) {
 		serial = device.serial;
 		uuid = device.uuid;
 	}
-	*/
-	urlString = 'https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard/' + '?serial=' + serial + '&uuid=' + uuid;
+	urlString = 'https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard;
+	// urlString += '/?serial=' + serial + '&uuid=' + uuid;
 	return urlString;
 }
 
@@ -68,5 +67,5 @@ function launchCFIWhiteboard(url) {
 	var urlString = '';
 	urlString = buildCFIWhiteboardURL ('https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard/');
 	document.getElementById("urlInfo").innerHTML = urlString;
-    // window.open(urlString, '_blank', 'location=no,toolbar=no');
+    window.open(urlString, '_blank', 'location=no,toolbar=no');
 }
