@@ -34,6 +34,9 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+		var serial = device.serial;
+		var uuid = device.uuid;
+		document.getElementById("deviceInfo").innerHTML = "serial: " + serial + ", uuid: " + uuid;
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
