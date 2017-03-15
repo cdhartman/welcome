@@ -59,7 +59,7 @@ function buildCFIWhiteboardURL (url) {
 		uuid = device.uuid;
 	}
 	urlString = 'https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard';
-	// urlString += '/?serial=' + serial + '&uuid=' + uuid;
+	urlString += '/?serial=' + serial + '&uuid=' + uuid;
 	return urlString;
 }
 
@@ -67,5 +67,5 @@ function launchCFIWhiteboard(url) {
 	var urlString = '';
 	urlString = buildCFIWhiteboardURL ('https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard/');
 	document.getElementById("urlInfo").innerHTML = urlString;
-    window.open(urlString, '_blank', 'location=no,toolbar=no');
+    // window.open(urlString, '_blank', 'location=no,toolbar=no');
 }
