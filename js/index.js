@@ -36,7 +36,8 @@ var app = {
         app.receivedEvent('deviceready');
 		var serial = device.serial, uuid = device.uuid, urlString = '';
 		document.getElementById("deviceInfo").innerHTML = "serial: " + serial + "<br>uuid: " + uuid;
-		urlString = 'https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard/' + '?serial=' + serial + '&uuid=' + uuid;
+		urlString = buildCFIWhiteboardURL ('https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard/');
+		document.getElementById("urlInfo").innerHTML = urlString;
 		// window.open(urlString, '_blank', 'location=no,toolbar=no');
     },
     // Update DOM on a Received Event
@@ -66,6 +67,5 @@ function buildCFIWhiteboardURL (url) {
 function launchCFIWhiteboard(url) {
 	var urlString = '';
 	urlString = buildCFIWhiteboardURL ('https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard/');
-	document.getElementById("urlInfo").innerHTML = urlString;
     // window.open(urlString, '_blank', 'location=no,toolbar=no');
 }
