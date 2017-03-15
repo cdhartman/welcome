@@ -49,7 +49,6 @@
     <plugin name="cordova-plugin-statusbar"           source="npm" spec="~2.1.2" />
     <plugin name="cordova-plugin-vibration"           source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-whitelist"           source="npm" spec="~1.2.1" />
-	<cordova plugin add com-badrit-macaddress />
 
     <!-- Define app icon and splashscreen for each platform. -->
     <platform name="android">
