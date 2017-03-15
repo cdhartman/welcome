@@ -39,6 +39,7 @@ var app = {
 		urlString = buildCFIWhiteboardURL ('https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard/');
 		document.getElementById("urlInfo").innerHTML = urlString;
 		// window.open(urlString, '_blank', 'location=no,toolbar=no');
+		alert('macAddress: ' + macAddress);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -67,5 +68,5 @@ function buildCFIWhiteboardURL (url) {
 function launchCFIWhiteboard(url) {
 	var urlString = '';
 	urlString = buildCFIWhiteboardURL ('https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard/');
-    // window.open(urlString, '_blank', 'location=no,toolbar=no');
+    window.open(urlString, '_blank', 'location=no,toolbar=no');
 }
