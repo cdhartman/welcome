@@ -35,7 +35,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 		var serial = device.serial, uuid = device.uuid, urlString = '';
-		document.getElementById("deviceInfo").innerHTML = "serial: " + serial + ", uuid: " + uuid;
+		document.getElementById("deviceInfo").innerHTML = "serial: " + serial + "<br>uuid: " + uuid;
 		urlString = 'https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard/' + '?serial=' + serial + '&uuid=' + uuid;
 		// window.open(urlString, '_blank', 'location=no,toolbar=no');
     },
@@ -52,8 +52,23 @@ var app = {
     }
 };
 
-function launchCFIWhiteboard(url) {
-	var serial = device.serial, uuid = device.uuid, urlString = '';
+function buildCFIWhiteboardURL (url) {
+	var serial = '', uuid = '', urlString = '';
+	if (device !== undefined) {
+		serial = device.serial;
+		uuid = device.uuid;
+	}
 	urlString = 'https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard/' + '?serial=' + serial + '&uuid=' + uuid;
-    window.open(urlString, '_blank', 'location=no,toolbar=no');
+	return urlString;
+}
+
+function launchCFIWhiteboard(url) {
+	var serial = '', uuid = '', urlString = '';
+	if (device !== undefined) {
+		serial = device.serial;
+		uuid = device.uuid;
+	}
+	urlString = buildCFIWhiteboardURL ('https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard/');
+	document.getElementById("urlInfo").innerHTML = urlString;
+    // window.open(urlString, '_blank', 'location=no,toolbar=no');
 }
