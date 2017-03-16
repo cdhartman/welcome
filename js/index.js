@@ -35,9 +35,18 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 		var serial = device.serial, uuid = device.uuid, urlString = '';
-		document.getElementById("deviceInfo").innerHTML = "serial: " + serial + "<br>uuid: " + uuid;
+		
 		urlString = buildCFIWhiteboardURL ('https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard');
 		document.getElementById("urlInfo").innerHTML = urlString;
+		
+		if (typeof device === "undefined") {
+		
+		} else {
+			serial = device.serial;
+			uuid = device.uuid;
+		}
+		document.getElementById("deviceInfo").innerHTML = "serial: " + serial + "<br>uuid: " + uuid;
+		
 		// window.open(urlString, '_blank', 'location=no,toolbar=no');
     },
     // Update DOM on a Received Event
@@ -55,7 +64,10 @@ var app = {
 
 function buildCFIWhiteboardURL (url) {
 	var serial = '', uuid = '', urlString = '';
-	if (device !== undefined) {
+	
+	if (typeof device === "undefined") {
+		
+	} else {
 		serial = device.serial;
 		uuid = device.uuid;
 	}
