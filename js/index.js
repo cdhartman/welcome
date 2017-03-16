@@ -79,6 +79,6 @@ function buildCFIWhiteboardURL (url) {
 function launchCFIWhiteboard(url) {
 	var urlString = '';
 	urlString = buildCFIWhiteboardURL ('https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard');
-	alert(urlString);
+	// alert(urlString);
     window.open(urlString, '_blank', 'location=no,toolbar=no');
 }
