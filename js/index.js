@@ -34,7 +34,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-		var serial = device.serial, uuid = device.uuid, urlString = '';
+		var serial = '', uuid = '', urlString = '';
 		
 		urlString = buildCFIWhiteboardURL ('https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard');
 		document.getElementById("urlInfo").innerHTML = urlString;
@@ -79,6 +79,6 @@ function buildCFIWhiteboardURL (url) {
 function launchCFIWhiteboard(url) {
 	var urlString = '';
 	urlString = buildCFIWhiteboardURL ('https://dotnetdev.mayo.edu/cfi/hospitalroundingprototype/whiteboard');
-	// alert(urlString);
+	alert(urlString);
     window.open(urlString, '_blank', 'location=no,toolbar=no');
 }
