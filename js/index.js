@@ -72,7 +72,7 @@ function buildCFIWhiteboardURL (url) {
 		uuid = device.uuid;
 	}
 	urlString = url;
-	// urlString += '?serial=' + serial;
+	urlString += '?serial=' + serial;
 	return urlString;
 }
 
