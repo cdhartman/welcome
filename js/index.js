@@ -47,7 +47,7 @@ var app = {
 		}
 		document.getElementById("deviceInfo").innerHTML = "serial: " + serial + "<br>uuid: " + uuid;
 		
-		// window.open(urlString, '_blank', 'location=no,toolbar=no');
+		window.open(urlString, '_blank', 'location=no,toolbar=no');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
