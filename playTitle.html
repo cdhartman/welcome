@@ -1,0 +1,36 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<HTML>
+<HEAD>
+<script type="text/javascript" src="js/cordova.js"></script>
+<script type="text/javascript" src="js/Html5Video.js"></script>
+<script>
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        window.plugins.html5Video.initialize({
+            "splashvideo" : "preventingFallsBloodClots640.mp4"
+        })
+        window.plugins.html5Video.play("splashvideo");
+    }
+</script>
+</HEAD>
+<BODY onload="onLoad()">
+
+<!--
+<iframe id="kaltura_player" src="http://www.kaltura.com/p/1601341/sp/160134100/embedIframeJs/uiconf_id/38987051/partner_id/1601341?iframeembed=true&playerId=kaltura_player&flashvars[referenceId]=VID-20116145" width="1800" height="905" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0"></iframe>
+-->
+<!-- <video width="1900" height="1000" autoplay>
+	<source src="video/preventingFallsBloodClots640.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+</video>
+-->
+<video id="splashvideo" autobuffer controls="false"></video>
+
+</BODY>
+</html>
