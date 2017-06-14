@@ -59,6 +59,7 @@
 	<gap:plugin name="org.apache.cordova.network-information" source="npm" />
 	<gap:plugin name="org.apache.cordova.splashscreen" source="npm" />
 	<gap:plugin name="jaeger-html5video" source="npm" />
+	<gap:plugin name="cordova-plugin-streaming-media-ibby" source="npm" />
 	
 	<feature name="VideoPlayer" >
 		<param name="android-package" value="com.dawsonloudon.videoplayer"/>
