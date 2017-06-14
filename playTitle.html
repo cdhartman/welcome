@@ -1,7 +1,13 @@
 <HTML>
 <HEAD>
 <script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" charset="utf-8" src="videoPlayer.js"></script>
+<script type="text/javascript" charset="utf-8" src="VideoPlayer.js"></script>
+<script type="text/javascript">
+	function playVideo(vidUrl)
+	{
+		window.plugins.videoPlayer.play(vidUrl);
+	}
+</script>
 </HEAD>
 <BODY>
 <script>
