@@ -32,9 +32,16 @@
 <video width="1900" height="1000" autoplay>
 	<source src="platform/android/res/raw/preventingFalls640.mp4" type="video/mp4">
 	Your browser does not support the video tag.
-</video>-->
+</video>
  
 <video id="splashvideo" autobuffer controls="false"></video>
+-->
+<script>
+var videoUrl = 'platform/android/res/raw/preventingFalls640.mp4';
+
+// Just play a video
+window.plugins.streamingMedia.playVideo(videoUrl);
+</script>
 
 </BODY>
 </html>
