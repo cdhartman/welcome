@@ -58,8 +58,8 @@
 	<gap:plugin name="org.apache.cordova.media-capture" source="npm" />
 	<gap:plugin name="org.apache.cordova.network-information" source="npm" />
 	<gap:plugin name="org.apache.cordova.splashscreen" source="npm" />
-	<gap:plugin name="cordova-plugin-streaming-media" source="npm" />
-	
+	<!-- <gap:plugin name="cordova-plugin-streaming-media" source="npm" /> -->
+	<gap:plugin name="com.phonegap.plugins.video.VideoPlayer" source="pgb" />
 
 	
 	<icon src="icon.png" />
